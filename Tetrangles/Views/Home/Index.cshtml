@@ -1,29 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" style="height:90vh;" >
-                <div class="carousel-item active">
-                    <img src="~/img/slide2.jpg" alt="First slide" class=" img-fluid d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/img/slide0.jpg" alt="Second slide" class=" img-fluid d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/img/slide1.jpg" alt="Third slide" class="img fluid d-block w-100" />
-                </div>
-        </div>
+     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner"  >
+             <div class="carousel-item active">
+                 <img src="~/img/test.jpg" alt="First slide" class=" img-fluid d-block w-100" >
+                 <div class="carousel-caption">
+                     <h1 >Luxury Houses</h1>
+                     <p>Notes about slide 1</p>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="~/img/home1.jpg" alt="Second slide" class=" img-fluid d-block w-100">
+                 <div class="carousel-caption ">
+                     <h2 >Reliable Houses for Rent</h2>
+                     <p>Notes about slide 2</p>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="~/img/home.jpg" alt="Third slide" class="img fluid d-block w-100" />
+                 <div class="carousel-caption">
+                     <h2 >Innovative Designs</h2>
+                     <p>Notes about slide 3</p>
+                 </div>
+             </div>
+             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Previous</span>
+             </a>
+             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
+             </a>
+         </div>
      </div>
-    <div class="container mb-5" style="height:700px;">
+    <div class="container mb-5" >
         <h1 class="text-center mt-5 pb-4" style="font-family:'Nunito',sans-serif;font-weight:Bold;color:#3B3A3A;
-        letter-spacing:0.05em;font-size:3.2em;">SERVICES</h1>
+        letter-spacing:0.05em;font-size:3.2em;" id="services">SERVICES</h1>
 
         <div class="text-center mb-5" data-border-width="5" style="transform-origin: center 5px;width:120px;height:10px;
         background-color:rgba(237, 205, 31, 1);position:relative;left:493px;bottom:10px"></div>
 
         <div class="row">
             
-            <div class="col-4">
+            <div class="col-md-4">
                 <img src="~/img/services/img.webp" class="img-fluid" />
                 <div class="pt-5 pl-5 pb-4 pr-4" style="border: 0px solid rgba(117, 117, 117, 1);background-color:rgba(247,247,247,1);">
                     <h3 style="font-family:'Nunito',sans-serif;"><span>Real Estate <br />Development</span></h3>
@@ -32,12 +52,12 @@
                             They say land is the new gold. It is true that an investment in property never depreciates
                             but we can add some extra value to your real estate and property goals, with the very creative ideas
                             and brilliance of our combined team of surveyors, architects, engineers, estate managers and sales executives
-                       <span><a href="#">Read More</a></span>
+                       <span><a asp-controller="Home" asp-action="RealEstate">Read More</a></span>
                         </span>
                     </p>
                  </div>
                 </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <img src="~/img/services/img2.webp" class="img-fluid" />
                 <div class="pt-5 pl-5 pb-5 pr-4" style="border: 0px solid rgba(117, 117, 117, 1);background-color:rgba(247,247,247,1);">
                     <h3 class="pb-3"><span>Facility<br /> Management</span></h3>
@@ -45,12 +65,12 @@
                         <span>
                             Because property is the language we understand best, managing properties optimally comes easy to us.
                             Whether it is leasing, sales or construction and renovation of properties, we understand your needs
-                            and are determined to exceed them.<span><a href="#">Read More</a></span>
+                            and are determined to exceed them.<span><a asp-controller="Home" asp-action="Rent">Read More</a></span>
                         </span>
                     </p>
                 </div>
                 </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <img src="~/img/services/img3.webp" class="img-fluid" />
                 <div class="pt-5 pl-5 pb-4 pr-4" style="border: 0px solid rgba(117, 117, 117, 1);background-color:rgba(247,247,247,1);">
                     <div style="border: 0px solid rgba(117, 117, 117, 1);background-color:rgba(247,247,247,1);">
@@ -59,7 +79,7 @@
                             <span>
                                 We employ the use of latest technology to create our custom made steel work projects. Such projects include Gates and Carport Gates
                                 Our gates are durable, and aesthetically appealing. Built to last decades and at the same time never go out of fashion.
-                             <span><a href="#">Read More</a></span>
+                             <span><a asp-controller="Home" asp-action="Steel">Read More</a></span>
                             </span>
                         </p>
                     </div>
@@ -68,106 +88,128 @@
 
             </div>
     </div>
-<div class="row" style="background-color:rgba(247,247,247,1);border:0px solid rgba(117,117,117,1);">
-    <div class="col-1"></div>
-    <div class="col-5">
-        <h3 style="font-family:'Nunito',sans-serif;font-size:3.2em;" class="pt-5 pb-3"><span style="letter-spacing:0.05em;color:#1E2D3B;">ABOUT</span></h3>
-        <div class="text-center mb-4" data-border-width="10" style="transform-origin: center 5px;width:116px;height:10px;
+    
+        <div class="row" style="background-color:rgba(247,247,247,1);border:0px solid rgba(117,117,117,1);">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <h3 style="font-family:'Nunito',sans-serif;font-size:3.2em;" id="about" class="pt-5 pb-3 pl-2"><span style="letter-spacing:0.05em;color:#1E2D3B;">ABOUT</span></h3>
+                <div class="text-center mb-4 ml-2" data-border-width="10" style="transform-origin: center 5px;width:116px;height:10px;
         background-color:rgba(237, 205, 31, 1);position:relative;left:1px;bottom:10px"></div>
-         <p class="pb-4" style="font-family:'Nunito',sans-serif;line-height:1.7em;color:#3B3A3A;font-size:1.3em;">
-           Tetrangles Project Ltd, is a full service real estate development company; we specialise in the entire lifecycle of a real estate project i.e. from the acquisition of properties through conceptualisation, sales and maintenance. Thus, we develop, manage, sell and lease properties of all categories.
-           We trade on our spirit of innovation and several years of experience to deliver world class projects that are way beyond the beautiful and luxurious properties you see.
-           Our work process is precise, transparent a d tailor made from start to finish.
-           At TPL, our goal is to deliver a lifestyle that caters to you.
-        </p>
-    </div>
-    <div class="col-6">
-        <img src="~/img/about/about.jpeg" class="img-fluid"/>
-    </div>
-</div>
-<div class="row text-center" style="background-color:#edcd1d;color:#1E2D3B;height:220px;">
-    <div class="container d-flex align-items-center">
-
-        <div class="col-4 text-center" style="border-right:2px solid white;float:left;">
-            <p style="line-height:60px;margin:0px;color:#3D5975;font-size:3.4em;font-weight:bold;"><span>2020</span></p>
-            <p style="line-height:20px;color:#3D5975;font-size:1.8em;font-weight:bold;"><span>Year <br/>Established</span></p>
+                <p class="pb-4 pl-2 pr-2" style="font-family:'Nunito',sans-serif;line-height:1.7em;color:#3B3A3A;font-size:1.3em;">
+                    Tetrangles Project Ltd, is a full service real estate development company; we specialise in the entire lifecycle of a real estate project i.e. from the acquisition of properties through conceptualisation, sales and maintenance. Thus, we develop, manage, sell and lease properties of all categories.
+                    We trade on our spirit of innovation and several years of experience to deliver world class projects that are way beyond the beautiful and luxurious properties you see.
+                    Our work process is precise, transparent a d tailor made from start to finish.
+                    At TPL, our goal is to deliver a lifestyle that caters to you.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="~/img/about/about.jpeg" class="img-fluid" />
+            </div>
         </div>
-        <div class="col-4 text-center" style="float:left;border-right:2px solid white;">
+
+<div class="container-fluid" style="background-color:red;">
+    <div class="row text-center d-flex align-items-center" style="background-color:#edcd1d;color:#1E2D3B;">
+
+        <div class="col-md-4 text-center" style="border-right:2px solid white;float:left;">
+            <p style="line-height:60px;margin:0px;color:#3D5975;font-size:3.4em;font-weight:bold;"><span>2020</span></p>
+            <p style="line-height:20px;color:#3D5975;font-size:1.8em;font-weight:bold;"><span>Year <br />Established</span></p>
+        </div>
+        <div class="col-md-4 text-center" style="float:left;border-right:2px solid white;">
             <span style="line-height:60px;margin:0px;color:#3D5975;font-size:3.4em;font-weight:bold;">300<br /></span>
             <span style="line-height:20px;color:#3D5975;font-size:1.8em;font-weight:bold;">Projects<br />Completed</span>
         </div>
-        <div class="col-4 text-center" style="float:left;">
+        <div class="col-md-4 text-center" style="float:left;">
             <span style="line-height:60px;margin:0px;color:#3D5975;font-size:3.4em;font-weight:bold;">5<br /></span>
             <span style="line-height:20px;color:#3D5975;font-size:1.8em;font-weight:bold;">Awards<br />Won</span>
         </div>
     </div>
- </div>
+</div>
+
 <div class="container mt-5">
-    <h1 class="text-center mt-5 mb-5">PROJECTS</h1>
+    <h1 class="text-center mt-5 mb-5" id="projects">PROJECTS</h1>
     <div class="text-center mb-4" data-border-width="10" style="transform-origin: center 5px;width: 116px;height: 10px;
      background-color:rgba(237, 205, 31, 1);position:relative;left:495px;bottom:28px"></div>
     <div class="row">
-        <div class="col">
+        <div class="col-md-6 house">
             <img src="https://static.wixstatic.com/media/c19c76_a0c8f339cfb94906aa7f587a62c38f15.jpg/v1/fill/w_852,h_932,al_c,q_85/c19c76_a0c8f339cfb94906aa7f587a62c38f15.webp" class="img-fluid mb-4" />
-            <img src="https://static.wixstatic.com/media/c19c76_89c49f1613c147dcb672ee4f63dccd8f.jpg/v1/fill/w_758,h_830,al_c,q_85/c19c76_89c49f1613c147dcb672ee4f63dccd8f.webp" class="img-fluid" />
+            <div class="overlay">
+                <div class="text">Houses Built</div>
+            </div>
         </div>
-        <div class="col">
+        <div class="col-md-6 rent">
+            <a asp-controller="Rent" asp-action="Index">
+            <img src="https://static.wixstatic.com/media/c19c76_89c49f1613c147dcb672ee4f63dccd8f.jpg/v1/fill/w_758,h_830,al_c,q_85/c19c76_89c49f1613c147dcb672ee4f63dccd8f.webp" class="img-fluid" />
+            <div class="overlay">
+                <div class="text">Houses For Rent</div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 carport">
             <img src="https://static.wixstatic.com/media/c19c76_5a9e692f14ed419db399cdf44bd02177.jpg/v1/fill/w_952,h_1042,al_c,q_85,usm_0.66_1.00_0.01/c19c76_5a9e692f14ed419db399cdf44bd02177.webp" class="img-fluid mb-4" />
-            <img src="https://static.wixstatic.com/media/c19c76_5f05f0fa3cc84e448cc6531038e5344d.jpg/v1/fill/w_535,h_586,al_c,lg_1,q_80/c19c76_5f05f0fa3cc84e448cc6531038e5344d.webp" class="img-fluid "  />
+            <div class="overlay">
+                <div class="text">Stylish Carports</div>
+            </div> 
+        </div>
+        <div class="col-md-6 steel">
+            <img src="https://static.wixstatic.com/media/c19c76_5f05f0fa3cc84e448cc6531038e5344d.jpg/v1/fill/w_535,h_586,al_c,lg_1,q_80/c19c76_5f05f0fa3cc84e448cc6531038e5344d.webp" class="img-fluid " />
+            <div class="overlay">
+                <div class="text">Steel Works</div>
+            </div>
         </div>
     </div>
 </div>
+
 <div class="container-fluid bg-light mt-5">
-    <h1 class="text-center pt-5 pb-5">CLIENTS</h1>
+    <h1 class="text-center pt-5 pb-1">CLIENTS</h1>
     <div class="text-center mb-4" data-border-width="10" style="transform-origin: center 5px;width: 116px;height: 10px;
-        background-color:rgba(237, 205, 31, 1);position:relative;left:570px;bottom:28px"></div>
+        background-color:rgba(237, 205, 31, 1);position:relative;left:567px;bottom:0px"></div>
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-2">
-            <img src="https://static.wixstatic.com/media/c19c76_cfeea1550efb4df2bbd1d142a13af6d2.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_cfeea1550efb4df2bbd1d142a13af6d2.webp" />
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <img class="img-fluid d-block" style="width:100%;"  src="https://static.wixstatic.com/media/c19c76_cfeea1550efb4df2bbd1d142a13af6d2.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_cfeea1550efb4df2bbd1d142a13af6d2.webp" />
+        </div>
+        <div class="col-md-2">
+            <img  class="img-fluid" style="width:100%;" src="https://static.wixstatic.com/media/c19c76_452720f393594be0899dbc968190e648.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_452720f393594be0899dbc968190e648.webp" />
 
         </div>
-        <div class="col-2">
-            <img src="https://static.wixstatic.com/media/c19c76_452720f393594be0899dbc968190e648.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_452720f393594be0899dbc968190e648.webp" />
+        <div class="col-md-2">
+            <img  class="img-fluid" style="width:100%;" src="https://static.wixstatic.com/media/c19c76_75b403aa340f4ec2b4a09dd1a9ecafeb.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_75b403aa340f4ec2b4a09dd1a9ecafeb.webp" />
 
         </div>
-        <div class="col-2">
-            <img src="https://static.wixstatic.com/media/c19c76_75b403aa340f4ec2b4a09dd1a9ecafeb.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_75b403aa340f4ec2b4a09dd1a9ecafeb.webp" />
+        <div class="col-md-2">
+            <img  class="img-fluid" style="width:100%;" src="https://static.wixstatic.com/media/c19c76_1d3deb1566654d56b8630dcabfe7027e.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_1d3deb1566654d56b8630dcabfe7027e.webp" />
 
         </div>
-        <div class="col-2">
-            <img src="https://static.wixstatic.com/media/c19c76_1d3deb1566654d56b8630dcabfe7027e.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_1d3deb1566654d56b8630dcabfe7027e.webp" />
+        <div class="col-md-2">
+            <img  class="img-fluid" style="width:100%;" src="https://static.wixstatic.com/media/c19c76_6c64fe7fa8964e09bf2143f277e5f8ed.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_6c64fe7fa8964e09bf2143f277e5f8ed.webp" />
 
         </div>
-        <div class="col-2">
-            <img src="https://static.wixstatic.com/media/c19c76_6c64fe7fa8964e09bf2143f277e5f8ed.png/v1/fill/w_196,h_196,al_c,lg_1,q_85/c19c76_6c64fe7fa8964e09bf2143f277e5f8ed.webp" />
-
-        </div>
-        <div class="col-1"></div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 <div class="container-fluid mt-5">
     <h2 class="text-center mt-5 pb-5 pt-5" style="letter-spacing:0.05em;color:#1E2D3B;line-height:normal;font-family:'Nunito',sans-serif;">
-    <span style="        color: #1E2D3B;
+    <span style="color: #1E2D3B;
         font-weight: Bold;
-        font-size: 2.3em;">CONTACT</span></h2>
+        font-size: 2.3em;" id="contactus" >CONTACT</span></h2>
     <div class="text-center mb-4" data-border-width="10" style="transform-origin: center 5px;width: 116px;height: 10px;
     background-color:rgba(237, 205, 31, 1);position:relative;left:570px;bottom:28px"></div>
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10 ml-5 pl-5">
-            <iframe style="width:90%;"
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7135885554103!2d3.4283323144218603!3d6.430827326018707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5259d7310a7%3A0xe382eaae076faf1b!2sEko%20Hotel%20Roundabout%2C%20Victoria%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1605031291554!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
+        <div class="col-md-1"></div>
+        <div class="col-md-10 ml-5 pl-5">
 
+            <iframe style="width:90%;border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.684769247127!2d3.49171031403599!3d6.43452132597829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf5d3bf9b04a5%3A0xc511fc08b060f5ad!2sIlasan%20Bus%20Stop!5e0!3m2!1sen!2sng!4v1605734561483!5m2!1sen!2sng" width="600"
+                    height="450" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
-        <div class="col-1"></div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 <div class="container mt-5 pb-5 pt-5">
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-5" style="font-family:Helvetica, sans-serif,sans-serif;color:#3B3A3A;">
+        <div class="col-md-1"></div>
+        <div class="col-md-5" style="font-family:Helvetica, sans-serif,sans-serif;color:#3B3A3A;">
             <h2 class="pb-5" style="font-weight:bold;">Contact Us</h2>
             <form class="form-horizontal">
                 <div class="form-group">
@@ -191,17 +233,23 @@
                     <textarea rows="10" class="form-control"></textarea>
                 </div>
                 <div class="form-group align-items-end flex-column">
-                    <input type="submit" value="Submit"  class="btn bg-dark text-warning p-2" style="float:right;"/>
+                    <input type="submit" value="Submit"  class="btn bg-dark text-warning pl-5 pr-5 pt-3 pb-3" style="border-radius:0px;"/>
                 </div>
             </form>
         </div>
-        <div class="col-5" style="font-family:Helvetica, sans-serif,sans-serif;color:#3B3A3A;">
+        <div class="col-md-5" style="font-family:Helvetica, sans-serif,sans-serif;color:#3B3A3A;">
             <h2 class="pb-5" style="font-weight:bold;margin-left:30%">Head Office</h2>
             <address style="margin-left:30%;line-height:1.5em !important; font-size:1.3em;">
-                Email: info@tetrangles.com<br />
-                Address: No 5 ikorodu villa ikorodu Lagos state<br />
+                Address: Block 193, Flat 6, Ilasan Housing Estate, Lekki, Lagos state<br />
                 Nigeria Africa<br />
-                Telephone: 07068181972
+                Email: info@tetrangles.com<br />
+                Telephone: 08058358897,08188886608
+            </address>
+            <h2 class="pb-3 mt-4" style="font-weight:bold;margin-left:30%">Branch Office</h2>
+            <address style="margin-left:30%;line-height:1.5em !important; font-size:1.3em;">
+                Branch Address : Shop 31, OK Plaza Just Before Shoprite,
+                Lekki Epe Expressway,
+                Sangotedo, Lagos State
             </address>
             <h2 class="pb-3 mt-5" style="font-weight:bold;margin-left:30%">Social Media</h2>
             <address style="margin-left:30%;line-height:1.5em !important; font-size:1.3em;">
@@ -210,7 +258,7 @@
                 <span class="fa fa-instagram fa-2x"></span>
             </address>
         </div>
-        <div class="col-1"></div>
+        <div class="col-md-1"></div>
     </div> 
 </div>
 <script type="text/javascript">

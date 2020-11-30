@@ -33,5 +33,19 @@ namespace Tetrangles.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult RealEstate()
+        {
+            return View();
+        }
+
+        public IActionResult Rent()
+        {
+            return View();
+        }
+        public IActionResult Steel()
+        {
+            return View();
+        }
     }
 }

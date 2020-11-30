@@ -24,5 +24,8 @@
     <Folder Include="wwwroot\img\services\" />
     <Folder Include="wwwroot\img\about\" />
     <Folder Include="wwwroot\img\projects\" />
+    <Folder Include="Views\Rent\" />
+    <Folder Include="wwwroot\img\Rent\" />
+    <Folder Include="wwwroot\icons\" />
   </ItemGroup>
 </Project>
