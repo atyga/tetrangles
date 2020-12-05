@@ -27,5 +27,6 @@
     <Folder Include="Views\Rent\" />
     <Folder Include="wwwroot\img\Rent\" />
     <Folder Include="wwwroot\icons\" />
+    <Folder Include="Views\Carport\" />
   </ItemGroup>
 </Project>
